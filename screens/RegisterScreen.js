@@ -4,11 +4,11 @@ import { View, Text, StyleSheet } from "react-native";
 import { auth } from "../fireBase";
 
 
-const RegisterScreen = () => {
+const RegisterScreen = ({navigation}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageURL, setImageURL] = useState("");
 
   const register = () => {
    auth.createUserWithEmailAndPassword(email, password)
@@ -18,7 +18,7 @@ const RegisterScreen = () => {
     
 user.updateProfile({
   displayName: name,
-  photoURL: imageUrl ?  imageUrl:"https://i.pinimg.com/originals/34/a5/b8/34a5b8b2a7d86f39e7faaa8e1f064c81.jpg"
+  photoURL: imageURL ?  imageURL:"https://i.pinimg.com/originals/34/a5/b8/34a5b8b2a7d86f39e7faaa8e1f064c81.jpg"
 }).then(() => {
   // Update successful
   // ...
@@ -26,7 +26,7 @@ user.updateProfile({
   // An error occurred
   // ...
 });  
-
+navigation.replace('Chat')
     // ...
   })
   .catch((error) => {
@@ -64,8 +64,8 @@ user.updateProfile({
         placeholder="Enter your image Url"
         label="Profile Picture"
         leftIcon={{ type: "material", name: "face" }}
-        value={imageUrl}
-        onChangeText={(text) => setImageUrl(text)}
+        value={imageURL}
+        onChangeText={(text) => setImageURL(text)}
       />
 
       <Button title={"register"} onPress={register} style={styles.button} />

@@ -4,12 +4,13 @@ import 'firebase/compat/firestore'
  import firebase from "firebase/compat/app";
 // import * as firebase from 'firebase'
 const firebaseConfig = {
-  apiKey: "AIzaSyBGyvweJhGJ1l59YstsBh3mF3mPyJY1MEQ",
-  authDomain: "chatapp-ed119.firebaseapp.com",
-  projectId: "chatapp-ed119",
-  storageBucket: "chatapp-ed1r19.appspot.com",
-  messagingSenderId: "92893246623",
-  appId: "1:92893246623:web:038346e5f7e31844d15eaa"
+    apiKey: "AIzaSyCzs0F5DaWGUM6jiN4BK_TOItybHAHwpwU",
+    authDomain: "chatapp-d12fa.firebaseapp.com",
+    projectId: "chatapp-d12fa",
+    storageBucket: "chatapp-d12fa.appspot.com",
+    messagingSenderId: "958054327196",
+    appId: "1:958054327196:web:a08ded94e79d12515a1e59"
+  
 };
 
 let app;
